@@ -1,0 +1,18 @@
+body {
+    background-color: #283747;
+}
+
+h1, h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FBFCFC;
+    text-align: center;
+}
+
+#search {
+    display: inline-block;
+    text-align: center;
+}
+
+form {
+    margin: auto;
+}
