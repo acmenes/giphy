@@ -13,13 +13,17 @@ async function getGif(searchterm) {
     console.log(res)
     let numResults = res.data.data.length
     console.log(res.data.data.length)
+    let dataArray = res.data.data
+    console.log(dataArray)
     if (numResults) {
-        const randomGif = Math.floor(Math.random() * numResults)
+        const randomGif = Math.floor(Math.random() * dataArray.length)
         console.log(randomGif)
+        console.log(dataArray[randomGif].embed_url)
+        const img = document.createElement("img")
+        img.src = dataArray[randomGif].embed_url
+        gifsHere.appendChild(img)
+
     }
-    const img = document.createElement("img")
-    img.src = "https://giphy.com/embed/2sVqNiaBdkgnu"
-    gifsHere.appendChild(img)
 
     // let showData = JSON.stringify(res.data.data)
     // console.log(showData)
